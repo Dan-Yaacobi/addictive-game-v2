@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pulse Circuit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>Pulse Circuit</h1>
+        <p class="rule">
+          Spin the ring and flip the top node so it matches each incoming pulse before impact, or the circuit overheats.
+        </p>
+        <div class="stats">
+          <div><span>Score</span><strong id="score">0</strong></div>
+          <div><span>Combo</span><strong id="combo">0</strong></div>
+          <div><span>Best</span><strong id="best">0</strong></div>
+          <div><span>Tempo</span><strong id="tempo">1.00x</strong></div>
+        </div>
+        <div class="controls">
+          <kbd>←</kbd><kbd>→</kbd> rotate ring &nbsp; <kbd>Space</kbd> flip top node &nbsp; <kbd>R</kbd> restart
+        </div>
+        <div class="queue" id="queue"></div>
+      </section>
+      <canvas id="game" width="720" height="720" aria-label="Pulse Circuit game board"></canvas>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>

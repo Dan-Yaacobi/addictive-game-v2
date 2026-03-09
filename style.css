@@ -1,0 +1,110 @@
+:root {
+  color-scheme: dark;
+  --bg: #070b16;
+  --panel: #101a31;
+  --text: #e4edff;
+  --muted: #8ea2cb;
+  --plus: #2ff6d0;
+  --minus: #ff4f9a;
+  --danger: #ff9f1c;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #15203f, var(--bg) 52%);
+  color: var(--text);
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  background: color-mix(in oklab, var(--panel), black 8%);
+  border: 1px solid #2f3c62;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+.rule {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.stats div {
+  background: #0d1428;
+  border: 1px solid #2d3a60;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+
+.stats span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.stats strong {
+  font-size: 1.2rem;
+}
+
+.controls {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+kbd {
+  background: #111d38;
+  border: 1px solid #3a4a74;
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+  color: #f6f9ff;
+}
+
+.queue {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pulse-chip {
+  min-width: 52px;
+  text-align: center;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid;
+}
+
+#game {
+  width: min(95vmin, 720px);
+  height: min(95vmin, 720px);
+  justify-self: center;
+  align-self: center;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
